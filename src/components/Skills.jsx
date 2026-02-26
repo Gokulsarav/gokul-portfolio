@@ -8,6 +8,7 @@ import {
     HiSparkles,
     HiSwitchHorizontal,
     HiWifi,
+    HiTranslate,
 } from 'react-icons/hi';
 import {
     SiReact,
@@ -44,6 +45,7 @@ const categoryIcons = {
     'Real-Time & Communication': <HiWifi size={24} />,
     'Version Control & Tools': <HiCog size={24} />,
     'UI Frameworks & Styling': <HiSparkles size={24} />,
+    Languages: <HiTranslate size={24} />,
 };
 
 const categoryGradients = {
@@ -54,6 +56,7 @@ const categoryGradients = {
     'Real-Time & Communication': 'from-teal-500 to-cyan-500',
     'Version Control & Tools': 'from-slate-500 to-zinc-500',
     'UI Frameworks & Styling': 'from-pink-500 to-rose-500',
+    Languages: 'from-emerald-500 to-teal-500',
 };
 
 const ICON_SIZE = 20;
@@ -155,6 +158,14 @@ const skillIcons = {
         icon: <SiBootstrap size={ICON_SIZE} style={{ color: '#7952B3' }} />,
         bgClass: 'bg-purple-500/15',
     },
+    'Tamil (Native)': {
+        icon: <HiGlobeAlt size={ICON_SIZE} style={{ color: '#059669' }} />,
+        bgClass: 'bg-emerald-500/15',
+    },
+    English: {
+        icon: <HiGlobeAlt size={ICON_SIZE} style={{ color: '#0284C7' }} />,
+        bgClass: 'bg-sky-500/15',
+    },
 };
 
 const Skills = () => {
@@ -187,7 +198,7 @@ const Skills = () => {
                                     {category.title}
                                 </h3>
                                 <p className="text-sm text-dark-500 dark:text-dark-400">
-                                    {category.skills.length} Technologies
+                                    {category.skills.length} {category.title === 'Languages' ? 'Languages' : 'Technologies'}
                                 </p>
                             </div>
                         </div>

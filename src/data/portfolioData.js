@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Gokul",
-  roles: ["Full Stack Developer", "React Specialist", "Software Developer"],
+  roles: ["Software Developer"],
   tagline:
     "with 2 years of experience working in product-driven environments and real-time systems",
   phone: "+91 96297 88892",
@@ -178,6 +178,13 @@ export const skillsData = {
       skills: [
         { name: "Bootstrap", level: 86 },
         { name: "Tailwind CSS", level: 90 },
+      ],
+    },
+    {
+      title: "Languages",
+      skills: [
+        { name: "Tamil (Native)", level: 100 },
+        { name: "English", level: 85 },
       ],
     },
   ],
