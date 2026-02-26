@@ -98,9 +98,12 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-xl sm:text-2xl md:text-3xl text-dark-500 dark:text-dark-400 font-light mb-6 max-w-full mx-auto flex items-center justify-center"
+          className="text-xl sm:text-2xl md:text-3xl text-dark-500 dark:text-dark-400 font-light mb-6 h-10 w-[18ch] max-w-full mx-auto flex items-center justify-center whitespace-nowrap"
         >
-          <span className="font-mono">Software Developer</span>
+          {/* <span className="font-mono"> */}
+            {displayText}
+            {/* <span className="animate-pulse text-primary-500 font-bold">|</span> */}
+          </span>
         </motion.div>
 
         {/* Tagline */}

@@ -224,7 +224,7 @@ export const projectsData = [
     title: "iSafe - Secure Home Management",
     description:
       "Built a scalable IoT-based home monitoring system with real-time MQTT telemetry, role-based access control, device-sensor mapping, and dynamic reporting dashboards for operational visibility.",
-    image: "🔐",
+    image: "🎨",
     technologies: ["React.js", "Tailwind CSS", "Websocket", "MQTT"],
     category: "IoT- MQTT",
     featured: true,

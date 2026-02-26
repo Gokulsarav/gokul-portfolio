@@ -100,7 +100,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-xl sm:text-2xl md:text-3xl text-dark-500 dark:text-dark-400 font-light mb-6 max-w-full mx-auto flex items-center justify-center"
         >
-          <span className="font-mono">Software Developer</span>
+          <span className="font-mono">Full Stack Developer</span>
         </motion.div>
 
         {/* Tagline */}

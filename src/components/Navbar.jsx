@@ -16,14 +16,11 @@ const navLinks = [
 
 const Navbar = () => {
   const { darkMode, toggleTheme } = useTheme();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-
       // Determine active section
       const sections = navLinks.map((l) => l.href.replace("#", ""));
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -98,11 +95,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "py-4 md:py-3 glass shadow-lg shadow-dark-900/5 dark:shadow-dark-950/30"
-          : "py-4 md:py-5 bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 py-4 md:py-4 bg-white/95 dark:bg-dark-950/95 backdrop-blur-md border-b border-dark-200/70 dark:border-dark-800/80 shadow-lg shadow-dark-900/5 dark:shadow-dark-950/30"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
@@ -153,7 +146,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Controls */}
-        <div className="md:hidden flex items-center gap-2 fixed right-4 top-4 z-50">
+        <div className="md:hidden flex items-center gap-2">
           <motion.button
             onClick={toggleTheme}
             className="p-2.5 rounded-xl bg-dark-100 dark:bg-dark-800 text-dark-600 dark:text-dark-300"
